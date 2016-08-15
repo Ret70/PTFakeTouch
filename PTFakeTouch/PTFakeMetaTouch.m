@@ -2,8 +2,8 @@
 //  HJFakeMetaTouch.m
 //  HJFakeTouch
 //
-//  Created by 唐炫 on 16/4/20.
-//  Copyright © 2016年 唐炫. All rights reserved.
+//  Created by PugaTang on 16/4/20.
+//  Copyright © 2016年 PugaTang. All rights reserved.
 //
 
 #import "PTFakeMetaTouch.h"
@@ -24,14 +24,13 @@ static NSMutableArray *touchAry;
     }
 }
 
-//构造触屏操作
 + (NSInteger)fakeTouchId:(NSInteger)pointId AtPoint:(CGPoint)point withTouchPhase:(UITouchPhase)phase{
     //DLog(@"4. fakeTouchId , phase : %ld ",(long)phase);
     if (pointId==0) {
         //随机一个没有使用的pointId
         pointId = [self getAvailablePointId];
         if (pointId==0) {
-            DLog(@"FakeTouch---pointId 耗尽");
+            DLog(@"PTFakeTouch ERROR! pointId all used");
             return 0;
         }
     }

@@ -2,8 +2,8 @@
 //  FakeTouch.h
 //  FakeTouch
 //
-//  Created by 唐炫 on 16/4/7.
-//  Copyright © 2016年 唐炫. All rights reserved.
+//  Created by PugaTang on 16/4/7.
+//  Copyright © 2016年 PugaTang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -20,8 +20,8 @@ FOUNDATION_EXPORT const unsigned char HJGameControllerVersionString[];
 
 #ifdef DEBUG
 #define RLog(fmt, ...)
-#define DLog(fmt, ...) NSLog((@"HJhelper   " fmt), ##__VA_ARGS__);
+#define DLog(fmt, ...) NSLog((@"PThelper   " fmt), ##__VA_ARGS__);
 #else
 #define DLog(fmt, ...)
-#define RLog(fmt, ...) NSLog((@"HJhelper   " fmt), ##__VA_ARGS__);
+#define RLog(fmt, ...) NSLog((@"PThelper   " fmt), ##__VA_ARGS__);
 #endif

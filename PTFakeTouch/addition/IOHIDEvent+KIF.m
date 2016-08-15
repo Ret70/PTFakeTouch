@@ -2,8 +2,8 @@
 //  IOHIDEvent+KIF.m
 //  testAnything
 //
-//  Created by 唐炫 on 16/4/1.
-//  Copyright © 2016年 唐炫. All rights reserved.
+//  Created by PugaTang on 16/4/1.
+//  Copyright © 2016年 PugaTang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

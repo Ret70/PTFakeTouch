@@ -2,8 +2,8 @@
 //  FixCategoryBug.h
 //  FakeTouch
 //
-//  Created by 唐炫 on 16/4/7.
-//  Copyright © 2016年 唐炫. All rights reserved.
+//  Created by PugaTang on 16/4/7.
+//  Copyright © 2016年 PugaTang. All rights reserved.
 //
 
 #ifndef MainLib_FixCategoryBug_h
