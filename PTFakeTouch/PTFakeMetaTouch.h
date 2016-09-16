@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HJFakeMetaTouch : NSObject
+@interface PTFakeMetaTouch : NSObject
 /**
  *  Fake a touch event 构造一个触屏基础操作
  *

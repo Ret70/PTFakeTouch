@@ -11,7 +11,7 @@
 #import "UIApplication-KIFAdditions.h"
 #import "UIEvent+KIFAdditions.h"
 static NSMutableArray *touchAry;
-@implementation HJFakeMetaTouch
+@implementation PTFakeMetaTouch
 
 + (void)load{
     KW_ENABLE_CATEGORY(UITouch_KIFAdditions);
