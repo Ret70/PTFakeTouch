@@ -1,6 +1,6 @@
 //
-//  HJFakeMetaTouch.m
-//  HJFakeTouch
+//  PTFakeMetaTouch.m
+//  PTFakeTouch
 //
 //  Created by PugaTang on 16/4/20.
 //  Copyright © 2016年 PugaTang. All rights reserved.

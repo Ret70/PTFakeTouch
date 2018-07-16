@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		15BBDF041D61AD5B0098330F /* PTFakeTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BBDEF91D61AD5B0098330F /* PTFakeTouch.framework */; };
 		15BBDF091D61AD5B0098330F /* PTFakeTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BBDF081D61AD5B0098330F /* PTFakeTouchTests.m */; };
-		15BBDF161D61AD920098330F /* PTFakeMetaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BBDF131D61AD920098330F /* PTFakeMetaTouch.h */; };
+		15BBDF161D61AD920098330F /* PTFakeMetaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BBDF131D61AD920098330F /* PTFakeMetaTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15BBDF171D61AD920098330F /* PTFakeMetaTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BBDF141D61AD920098330F /* PTFakeMetaTouch.m */; };
-		15BBDF1A1D61ADE00098330F /* PTFakeTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BBDF191D61ADE00098330F /* PTFakeTouch.h */; };
+		15BBDF1A1D61ADE00098330F /* PTFakeTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BBDF191D61ADE00098330F /* PTFakeTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15BBDF1D1D61AE470098330F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BBDF1C1D61AE470098330F /* IOKit.framework */; };
 		15BBDF291D61AECA0098330F /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BBDF1F1D61AECA0098330F /* UIApplication-KIFAdditions.h */; };
 		15BBDF2A1D61AECA0098330F /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BBDF201D61AECA0098330F /* UIApplication-KIFAdditions.m */; };
@@ -63,6 +63,7 @@
 		15BBDF341D61AF010098330F /* IOHIDEvent+KIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "IOHIDEvent+KIF.m"; path = "addition/IOHIDEvent+KIF.m"; sourceTree = "<group>"; };
 		15BBDF371D61AF540098330F /* FixCategoryBug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixCategoryBug.h; sourceTree = "<group>"; };
 		15BBDF391D61AFC50098330F /* LoadableCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = addition/LoadableCategory.h; sourceTree = "<group>"; };
+		6D69E1C920FC9D7A006C0F74 /* PTFakeTouch copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PTFakeTouch copy-Info.plist"; path = "/Users/pt/Desktop/git-work/PTFakeTouch/PTFakeTouch copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 				15BBDF071D61AD5B0098330F /* PTFakeTouchTests */,
 				15BBDEFA1D61AD5B0098330F /* Products */,
 				15BBDF1B1D61AE310098330F /* Frameworks */,
+				6D69E1C920FC9D7A006C0F74 /* PTFakeTouch copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,15 +163,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BBDF1A1D61ADE00098330F /* PTFakeTouch.h in Headers */,
+				15BBDF161D61AD920098330F /* PTFakeMetaTouch.h in Headers */,
 				15BBDF381D61AF540098330F /* FixCategoryBug.h in Headers */,
 				15BBDF2F1D61AECA0098330F /* UIView-KIFAdditions.h in Headers */,
 				15BBDF311D61AECA0098330F /* UIWindow-KIFAdditions.h in Headers */,
 				15BBDF351D61AF010098330F /* IOHIDEvent+KIF.h in Headers */,
 				15BBDF3A1D61AFC50098330F /* LoadableCategory.h in Headers */,
 				15BBDF2B1D61AECA0098330F /* UIEvent+KIFAdditions.h in Headers */,
-				15BBDF161D61AD920098330F /* PTFakeMetaTouch.h in Headers */,
 				15BBDF291D61AECA0098330F /* UIApplication-KIFAdditions.h in Headers */,
-				15BBDF1A1D61ADE00098330F /* PTFakeTouch.h in Headers */,
 				15BBDF2D1D61AECA0098330F /* UITouch-KIFAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
