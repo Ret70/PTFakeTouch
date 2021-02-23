@@ -29,15 +29,15 @@ typedef struct {
 
 - (id)initInView:(UIView *)view;
 {
-    CGRect frame = view.frame;    
+    CGRect frame = view.frame;
     CGPoint centerPoint = CGPointMake(frame.size.width * 0.5f, frame.size.height * 0.5f);
     return [self initAtPoint:centerPoint inView:view];
 }
 
 - (id)initAtPoint:(CGPoint)point inWindow:(UIWindow *)window;
 {
-	self = [super init];
-	if (self == nil) {
+    self = [super init];
+    if (self == nil) {
         return nil;
     }
     
@@ -47,13 +47,17 @@ typedef struct {
     //[self setTapCount:1];
     [self _setLocationInWindow:point resetPrevious:YES];
     
-	UIView *hitTestView = [window hitTest:point withEvent:nil];
+    UIView *hitTestView = [window hitTest:point withEvent:nil];
     
     [self setView:hitTestView];
     [self setPhase:UITouchPhaseBegan];
-    DLog(@"initAtPoint setPhase 0");
-    [self _setIsFirstTouchForView:YES];
-    [self setIsTap:NO];
+    NSOperatingSystemVersion iOS14 = {14, 0, 0};
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)] && [[NSProcessInfo new] isOperatingSystemAtLeastVersion:iOS14]) {
+        [self _setIsTapToClick:NO];
+    } else {
+        [self _setIsFirstTouchForView:YES];
+        [self setIsTap:NO];
+    }
     [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
     if ([self respondsToSelector:@selector(setGestureView:)]) {
         [self setGestureView:hitTestView];
@@ -65,7 +69,7 @@ typedef struct {
         [self kif_setHidEvent];
     }
     
-	return self;
+    return self;
 }
 
 - (void)resetTouch{
@@ -79,11 +83,17 @@ typedef struct {
     
     UIView *hitTestView = [window hitTest:point withEvent:nil];
     
+    NSOperatingSystemVersion iOS14 = {14, 0, 0};
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)] && [[NSProcessInfo new] isOperatingSystemAtLeastVersion:iOS14]) {
+        [self _setIsTapToClick:NO];
+    } else {
+        [self _setIsFirstTouchForView:YES];
+        [self setIsTap:NO];
+    }
+        
     [self setView:hitTestView];
     [self setPhase:UITouchPhaseBegan];
     //DLog(@"resetTouch setPhase 0");
-    [self _setIsFirstTouchForView:YES];
-    [self setIsTap:NO];
     [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
     if ([self respondsToSelector:@selector(setGestureView:)]) {
         [self setGestureView:hitTestView];
@@ -114,8 +124,13 @@ typedef struct {
     [self setView:hitTestView];
     [self setPhase:UITouchPhaseEnded];
     //DLog(@"init...touch...setPhase 3");
-    [self _setIsFirstTouchForView:YES];
-    [self setIsTap:NO];
+    NSOperatingSystemVersion iOS14 = {14, 0, 0};
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)] && [[NSProcessInfo new] isOperatingSystemAtLeastVersion:iOS14]) {
+        [self _setIsTapToClick:NO];
+    } else {
+        [self _setIsFirstTouchForView:YES];
+        [self setIsTap:NO];
+    }
     [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
     if ([self respondsToSelector:@selector(setGestureView:)]) {
         [self setGestureView:hitTestView];

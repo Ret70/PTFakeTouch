@@ -25,6 +25,7 @@ KW_FIX_CATEGORY_BUG_H(UITouch_KIFAdditions)
 - (void)setGestureView:(UIView *)view;
 - (void)_setLocationInWindow:(CGPoint)location resetPrevious:(BOOL)resetPrevious;
 - (void)_setIsFirstTouchForView:(BOOL)firstTouchForView;
+- (void)_setIsTapToClick:(BOOL)isTapToClick;
 
 - (void)_setHidEvent:(IOHIDEventRef)event;
 
